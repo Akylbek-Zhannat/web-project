@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Меню</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Меню</h1>
+        <nav>
+            <a href="index.html">Главная</a>
+            <a href="menu.html">Меню</a>
+            <a href="cart.html">Корзина</a>
+        </nav>
+    </header>
+    <main>
+        <!-- Фильтр категорий -->
+        <div class="filter-buttons">
+            <button onclick="filterDishes('all')">Все</button>
+            <button onclick="filterDishes('Закуски')">Закуски</button>
+            <button onclick="filterDishes('Горячие блюда')">Горячие блюда</button>
+            <button onclick="filterDishes('Напитки')">Напитки</button>
+            <button onclick="filterDishes('Выпивка')">Выпивка</button>
+            <button onclick="filterDishes('Супы')">Супы</button>
+        </div>
+
+        <!-- Список блюд -->
+        <section class="menu">
+            <!-- Закуски -->
+            <div class="dish" data-category="Закуски">
+                <img src="images/цезарь.jpeg" alt="Салат Цезарь">
+                <div>
+                    <h3>Салат "Цезарь"</h3>
+                    <p>Лёгкий салат с курицей, сыром пармезан и оригинальной заправкой.</p>
+                    <p>Цена: 2000 KZT</p>
+                    <label for="quantity-цезарь">Количество:</label>
+                    <input type="number" id="quantity-цезарь" min="1" value="1">
+                    <button onclick="addToCart('Салат Цезарь', 2000, 'quantity-цезарь')">Добавить в корзину</button>
+                </div>
+            </div>
+            <!-- Горячие блюда -->
+            <div class="dish" data-category="Горячие блюда">
+                <img src="images/карбонара.jpeg" alt="Паста Карбонара">
+                <div>
+                    <h3>Паста "Карбонара"</h3>
+                    <p>Классическая итальянская паста с беконом и сливочным соусом.</p>
+                    <p>Цена: 3000 KZT</p>
+                    <label for="quantity-карбонара">Количество:</label>
+                    <input type="number" id="quantity-карбонара" min="1" value="1">
+                    <button onclick="addToCart('Паста Карбонара', 3000, 'quantity-карбонара')">Добавить в корзину</button>
+                </div>
+            </div>
+            <!-- Напитки -->
+            <div class="dish" data-category="Напитки">
+                <img src="images/сок.jpeg" alt="Свежевыжатый сок">
+                <div>
+                    <h3>Свежевыжатый сок</h3>
+                    <p>Натуральный сок из свежих фруктов. Вкус по вашему выбору.</p>
+                    <p>Цена: 1000 KZT</p>
+                    <label for="quantity-сок">Количество:</label>
+                    <input type="number" id="quantity-сок" min="1" value="1">
+                    <button onclick="addToCart('Свежевыжатый сок', 1000, 'quantity-сок')">Добавить в корзину</button>
+                </div>
+            </div>
+            <!-- Выпивка -->
+            <div class="dish" data-category="Выпивка">
+                <img src="images/вино.jpeg" alt="Красное вино">
+                <div>
+                    <h3>Красное вино</h3>
+                    <p>Изысканное вино из лучших виноградников Европы.</p>
+                    <p>Цена: 5000 KZT</p>
+                    <label for="quantity-вино">Количество:</label>
+                    <input type="number" id="quantity-вино" min="1" value="1">
+                    <button onclick="addToCart('Красное вино', 5000, 'quantity-вино')">Добавить в корзину</button>
+                </div>
+            </div>
+            <!-- Супы -->
+            <div class="dish" data-category="Супы">
+                <img src="images/борщ.jpeg" alt="Борщ">
+                <div>
+                    <h3>Борщ</h3>
+                    <p>Классический суп с говядиной, свеклой и капустой. Подаётся со сметаной.</p>
+                    <p>Цена: 1500 KZT</p>
+                    <label for="quantity-борщ">Количество:</label>
+                    <input type="number" id="quantity-борщ" min="1" value="1">
+                    <button onclick="addToCart('Борщ', 1500, 'quantity-борщ')">Добавить в корзину</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 ZhanRest</p>
+    </footer>
+    <div id="scroll-to-top" class="hidden">↑</div>
+    <script src="js/script.js"></script>
+</body>
+</html>
